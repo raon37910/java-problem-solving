@@ -9,7 +9,7 @@ public class Main {
         if(score1 >= 90) {
             if(score2 >= 95) {
                 System.out.println(100000);
-            } else if(score >= 90) {
+            } else if(score2 >= 90) {
                 System.out.println(50000);
             } else {
                 System.out.println(0);
