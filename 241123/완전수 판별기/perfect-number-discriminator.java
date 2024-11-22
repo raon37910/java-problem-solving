@@ -18,7 +18,7 @@ public class Main {
             }
         }
 
-        return num;
+        return sum;
     }
 
     public static boolean check(int num) {
