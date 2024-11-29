@@ -24,7 +24,7 @@ public class Main {
             }
         }
 
-        System.out.println(ans);
+        System.out.println(ans == Integer.MIN_VALUE ? -1 : ans);
     }
 
     // 양수 직사각형인지 체크
