@@ -21,7 +21,7 @@ public class Main {
         int ans = 0;
 
         for(int i = 0; i < n; i++) {
-            for(int j = 0; j < n; j++) {
+            for(int j = 0; j < m; j++) {
                 ans = Math.max(type1(i, j), ans);
                 ans = Math.max(type2(i, j), ans);
                 ans = Math.max(type3(i, j), ans);
