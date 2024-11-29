@@ -22,11 +22,11 @@ public class Main {
 
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < m; j++) {
-                // ans = Math.max(type1(i, j), ans);
-                // ans = Math.max(type2(i, j), ans);
-                // ans = Math.max(type3(i, j), ans);
-                // ans = Math.max(type4(i, j), ans);
-                // ans = Math.max(type5(i, j), ans);
+                ans = Math.max(type1(i, j), ans);
+                ans = Math.max(type2(i, j), ans);
+                ans = Math.max(type3(i, j), ans);
+                ans = Math.max(type4(i, j), ans);
+                ans = Math.max(type5(i, j), ans);
                 ans = Math.max(type6(i, j), ans);
             }
         }
@@ -85,7 +85,7 @@ public class Main {
             return 0;
         }
 
-        System.out.printf("%d %d %d\n", arr[row][col], arr[row][col+1], arr[row][col+2]);
+        // System.out.printf("%d %d %d\n", arr[row][col], arr[row][col+1], arr[row][col+2]);
         return arr[row][col] + arr[row][col + 1] + arr[row][col+2];
     }
 }
