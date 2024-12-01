@@ -14,7 +14,7 @@ public class Main {
         for(int i = 0; i < q; i++) {
             int row = sc.nextInt();
             String dir = sc.next();
-            wind(row, dir);
+            wind(row-1, dir);
         }
 
         for(int i = 0; i < n; i++) {
@@ -26,7 +26,7 @@ public class Main {
     }
 
     public static void wind(int row, String dir) {
-        if(dir.equals("L")) {
+        if(dir.equals("R")) {
             shiftLeft(row);
         } else {
             shiftRight(row);
@@ -37,7 +37,7 @@ public class Main {
         int topNext = row - 1;
 
         while(topNext > 0 && canShift(topBefore, topNext)) {
-            if(topDir.equals("L")) {
+            if(topDir.equals("R")) {
                 shiftLeft(topNext);
             } else {
                 shiftRight(topNext);
@@ -53,7 +53,7 @@ public class Main {
         int bottomNext = row + 1;
 
         while(bottomNext < n && canShift(bottomBefore, bottomNext)) {
-            if(bottomDir.equals("L")) {
+            if(bottomDir.equals("R")) {
                 shiftLeft(bottomNext);
             } else {
                 shiftRight(bottomNext);
