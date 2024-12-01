@@ -35,7 +35,7 @@ public class Main {
         String topDir = dir.equals("L") ? "R" : "L";
         int topRow = row-1;
 
-        while(topRow > 0 && canShift(topRow+1, topRow)) {
+        while(topRow >= 0 && canShift(topRow+1, topRow)) {
             if(topDir.equals("R")) {
                 shiftLeft(topRow);
             } else {
