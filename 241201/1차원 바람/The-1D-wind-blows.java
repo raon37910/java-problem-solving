@@ -33,35 +33,31 @@ public class Main {
         }
 
         String topDir = dir.equals("L") ? "R" : "L";
-        int topBefore = row;
-        int topNext = row - 1;
+        int topRow = row-1;
 
-        while(topNext > 0 && canShift(topBefore, topNext)) {
+        while(topRow > 0 && canShift(topRow+1, topRow)) {
             if(topDir.equals("R")) {
-                shiftLeft(topNext);
+                shiftLeft(topRow);
             } else {
-                shiftRight(topNext);
+                shiftRight(topRow);
             }
 
-            topBefore = topNext;
-            topNext = topBefore - 1;
+            topRow -= 1;
             topDir = topDir.equals("L") ? "R" : "L";
         }
 
         String bottomDir = dir.equals("L") ? "R" : "L";
-        int bottomBefore = row;
-        int bottomNext = row + 1;
+        int bottomRow = row + 1;
 
-        while(bottomNext < n && canShift(bottomBefore, bottomNext)) {
+        while(bottomRow < n && canShift(bottomRow-1, bottomRow)) {
             if(bottomDir.equals("R")) {
-                shiftLeft(bottomNext);
+                shiftLeft(bottomRow);
             } else {
-                shiftRight(bottomNext);
+                shiftRight(bottomRow);
             }
 
-            bottomBefore = bottomNext;
-            bottomNext = bottomBefore + 1;
-            bottomDir = bottomDir.equals("L") ? "R" : "L";
+            bottomRow += 1;
+            bottomDir = bottomDir.equals("L") ? "R" : "L"; // c
         }
     }
 
