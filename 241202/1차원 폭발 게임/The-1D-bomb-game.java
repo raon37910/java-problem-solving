@@ -17,9 +17,9 @@ public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         input();
-        n = 5;
-        m = 1;
-        arr = new int[]{1,2,2,1,1};
+        // n = 5;
+        // m = 1;
+        // arr = new int[]{1,2,2,1,1};
 
         while(checkBombCondition() && bombCnt != n) {
             boolean[] positions = findRemovePositions();
