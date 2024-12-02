@@ -19,9 +19,9 @@ public class Main {
     public static void bomb() {
         int value = arr[r][c];
         int rowStart = r - (value - 1) >= 1 ? r - (value - 1) : 1;
-        int rowEnd = r + (value - 1) <= n ? r + (value - 1) : 1;
+        int rowEnd = r + (value - 1) <= n ? r + (value - 1) : n;
         int colStart = c - (value - 1) >= 1 ? c - (value - 1) : 1;
-        int colEnd = c + (value - 1) <= n ? c + (value - 1) : 1;
+        int colEnd = c + (value - 1) <= n ? c + (value - 1) : n;
 
         // row 삭제
         for(int i = rowStart; i <= rowEnd; i++) {
