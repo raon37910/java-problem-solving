@@ -11,16 +11,17 @@ public class Main {
     static int n;
     static int m;
     static int[] arr;
+    static int bombCnt = 0;
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         input();
-        // n = 5;
-        // m = 2;
-        // arr = new int[]{1,2,2,1,1};
+        n = 5;
+        m = 1;
+        arr = new int[]{1,2,2,1,1};
 
-        while(checkBombCondition()) {
+        while(checkBombCondition() && bombCnt != n) {
             boolean[] positions = findRemovePositions();
             // System.out.println(Arrays.toString(positions));
             bomb(positions);
@@ -75,6 +76,7 @@ public class Main {
         for(int i = 0; i < n; i++) {
             if(positions[i]) {
                 arr[i] = BLANK;
+                bombCnt++;
             }
         }
     }
