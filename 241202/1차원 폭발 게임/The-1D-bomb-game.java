@@ -25,6 +25,7 @@ public class Main {
             // System.out.println(Arrays.toString(positions));
             bomb(positions);
             shift();
+            // System.out.println(Arrays.toString(arr));
         }
 
         int cnt = 0;
@@ -122,7 +123,7 @@ public class Main {
 
         for(int i = 1; i < n; i++) {
             if(arr[i] == BLANK) {
-                continue;
+                break;
             }
 
             if(arr[i-1] == arr[i]) {
@@ -133,6 +134,8 @@ public class Main {
             }
         }
 
+        maxCnt = Math.max(maxCnt, cnt);
+        // System.out.println("maxCnt:" + maxCnt);
         return maxCnt >= m;
     }
 }
