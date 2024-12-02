@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 // N개의 폭탄이 쌓여 있다.
 // M개 이상 연속으로 같은 숫자가 적혀있는 폭탄은 터진다.
@@ -15,9 +16,13 @@ public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         input();
+        // n = 5;
+        // m = 2;
+        // arr = new int[]{1,2,2,1,1};
 
         while(checkBombCondition()) {
             boolean[] positions = findRemovePositions();
+            // System.out.println(Arrays.toString(positions));
             bomb(positions);
             shift();
         }
@@ -93,9 +98,10 @@ public class Main {
                     for(int j = startIndex; j < i; j++) {
                         positions[j] = true;
                     }
+                } 
 
-                    startIndex = i;
-                }
+                cnt = 1;
+                startIndex = i;
             }
         }
 
