@@ -11,6 +11,12 @@ public class Main {
     public static void main(String[] args) {
         input();
 
+        if (n == 1) {
+            for(int col = k; col <= k + m - 1; col++) {
+                arr[n][col] = 1;
+            }
+        }
+
         for(int row = 1; row <= n-1; row++) {
             boolean flag = true;
 
