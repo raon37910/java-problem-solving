@@ -26,7 +26,7 @@ public class Main {
                 int nx = cur.x + dx[dir];
                 int ny = cur.y + dy[dir];
 
-                if(nx < 1 || nx >= n || ny < 1 || ny >= n) {
+                if(nx < 1 || nx > n || ny < 1 || ny > n) {
                     continue;
                 }
 
